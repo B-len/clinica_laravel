@@ -67,26 +67,28 @@ class ClientController extends Controller
 
     public function update(Request $request, Client $client)
     {
-        //
         $request->validate([
             'name'=>'required',
             'last_name'=>'required',
-            'dni'=>'required|min:9|max:9|unique:clients',
+            'dni'=>'required|min:9|max:9',
             'phone_number'=>'min:9|max:9',
             'birth_date'=>'before:today'
         ]);
-        $client->update($request->all());
+        $client->name=e($request->name);
+        $client->last_name=e($request->last_name);
+        $client->dni=e($request->dni);
+        $client->address=e($request->address);
+        $client->phone_number=e($request->phone_number);
+        $client->birth_date=e($request->birth_date);
+        $client->email=e($request->email);
+        $client->group=e($request->group);
+        $client->save();
         return redirect()->route('clients.index')->with('success','Se ha actualizado correctamente');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Client  $cliente
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Client $client)
     {
-        //
+        $client->delete();
+        return back()->with('info','Borrado exitosamente');
     }
 }
