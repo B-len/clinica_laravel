@@ -7,10 +7,15 @@
     <li class="breadcrumb-item active">@yield('title')</li>
 @endsection
 @section('content')
-<h3>Registro de cliente</h3>
-    {!! Form::open (['route'=>'clients.store','method'=>'POST','files'=>true]) !!}
-    @include('admin.clients.form.form')
-    <a href="{{route('clients.index')}}">Cancelar</a>
-    {!! Form::submit('Guardar') !!}
-    {!! Form::close() !!}
+    <div class="card">
+        {!! Form::open (['route'=>'clients.store','method'=>'POST','files'=>true]) !!}
+        <div class="card-body">
+            @include('admin.clients.form.form')
+        </div>
+        <div class="card-footer">
+            <a class="btn btn-danger" href="{{route('clients.index')}}">Cancelar</a>
+            {!! Form::submit('Guardar',['class'=>'btn btn-primary']) !!}
+        </div>
+        {!! Form::close() !!}
+    </div>
 @endsection
