@@ -8,8 +8,6 @@
 @endsection
 @section('content')
         <div class="card">
-
-
         {!! Form::model($client,['route'=>['clients.update',$client],'method'=>'PUT','files'=>'true']) !!}
             <div class="card-body">
             @include('admin.clients.form.form')

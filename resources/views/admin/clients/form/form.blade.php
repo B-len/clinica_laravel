@@ -5,7 +5,7 @@
                 {!! Form::text('name',null,['class'=>'form-control']) !!}
             </div>
             <div class="col ">
-                {!! Form::label('last_name','Apellido') !!}
+                {!! Form::label('last_name','Apellidos') !!}
                 {!! Form::text('last_name',null,['class'=>'form-control']) !!}
             </div>
         </div>
@@ -36,7 +36,13 @@
             </div>
             <div class="col">
                 {!! Form::label('group','Grupo') !!}
-                {!! Form::select('group',['Amigos'=>'Amigos','Generales'=>'Generales'],['placeholder'=>'Selecciona un grupo'],['class'=>'form-control']) !!}
+                {!! Form::select('group',['Amigos'=>'Amigos','Generales'=>'Generales'],null,['class'=>'form-control','placeholder'=>'Selecciona un elemento']) !!}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {!! Form::label('medical_data','Datos médicos') !!}
+                {!! Form::textarea('medical_data',null,['class'=>'form-control']) !!}
             </div>
         </div>
 

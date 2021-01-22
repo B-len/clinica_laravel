@@ -23,6 +23,7 @@ class CreateClientsTable extends Migration
             $table->date('birth_date');
             $table->string('email');
             $table->string('group');
+            $table->string('medical_data');
             $table->timestamps();
         });
     }
