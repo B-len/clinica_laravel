@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Client;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ClientController extends Controller
 {
@@ -39,15 +40,10 @@ class ClientController extends Controller
         return redirect()->route('clients.index')->with('info','Se ha agregado correctamente');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Client  $client
-     * @return \Illuminate\Http\Response
-     */
     public function show(Client $client)
     {
-        //
+        $sessions=DB::table('medical_sessions')->where('client_id',$client->id)->get();
+        return view('admin.clients.show',compact('sessions','client'));
     }
 
 

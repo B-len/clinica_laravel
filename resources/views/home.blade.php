@@ -14,10 +14,13 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                   <div class="row">
+
+                   </div>
                 </div>
             </div>
         </div>
     </div>
+
 </div>
 @endsection
