@@ -29,3 +29,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('/admin/clients',App\Http\Controllers\ClientController::class)->names('clients');
 
 Route::resource('/admin/medical-sessions',App\Http\Controllers\MedicalSessionController::class)->names('medical-sessions');
+
+Route::resource('/admin/reservations',App\Http\Controllers\ReservationController::class)->names('reservations');

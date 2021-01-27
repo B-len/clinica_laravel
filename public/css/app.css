@@ -10927,4 +10927,86 @@ a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
+.mes{
+    width: 75%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.dia{
+    width: 16%;
+    border: 1px solid #d0e8f2;
+    /*height: 84px;*/
+    text-align: center;
+    background-color: #fcf8ec;
+}
 
+.texto_dia{
+    padding: 2%;
+    background-color: #79a3b1 ;
+}
+
+.nombre_mes{
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    background-color:#456268 ;
+    color:#fcf8ec;
+    padding: 1%;
+}
+
+.nombre_dia{
+    background-color: lightgrey;
+    width:  14.286001%;
+    padding: 1%;
+}
+.nombres_dias{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    font-size: 12px;
+}
+@media (min-width: 576px) {
+    .dia{
+        width: 14.286001%;
+        height: 84px;
+    }
+    .nombre_dia{
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 768px) {
+    .dia{
+        height: 90px;
+    }
+    .nombre_dia{
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 992px) {
+    .dia{
+        height: 100px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .dia{
+        height: 110px;
+    }
+}
+
+@media (min-width: 1430px) {
+    .dia{
+        height: 120px;
+    }
+}
+
+@media (min-width: 1650px) {
+    .dia{
+        height: 130px;
+    }
+}

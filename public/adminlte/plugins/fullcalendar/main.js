@@ -428,7 +428,7 @@ Docs & License: https://fullcalendar.io/
         });
     }
 
-    var DAY_IDS = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+    var DAY_IDS = ['dom', 'lun', 'mar', 'mier', 'jue', 'vier', 'sab'];
     // Adding
     function addWeeks(m, n) {
         var a = dateToUtcArray(m);
