@@ -15,11 +15,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::get('/admin', function () {
     return view('admin');
 });
+
+Route::get('/admin/panel', function () {
+    return view('admin.panel');
+})->name('admin-panel');
 
 Auth::routes();
 
@@ -31,3 +35,9 @@ Route::resource('/admin/clients',App\Http\Controllers\ClientController::class)->
 Route::resource('/admin/medical-sessions',App\Http\Controllers\MedicalSessionController::class)->names('medical-sessions');
 
 Route::resource('/admin/reservations',App\Http\Controllers\ReservationController::class)->names('reservations');
+
+
+Route::get('/admin/reservations/nextMonth/{date}',[App\Http\Controllers\ReservationController::class,'nextMonth'])->name('nextMonth');
+
+Route::get('/admin/reservations/last/{date}',[App\Http\Controllers\ReservationController::class,'lastMonth'])->name('lastMonth');
+

@@ -4,6 +4,7 @@
     <li class="breadcrumb-item active">@yield('title')</li>
 @endsection
 @section('content')
+
     <div class="card">
         <div class="card-body">
             <div class="table-responsive">
